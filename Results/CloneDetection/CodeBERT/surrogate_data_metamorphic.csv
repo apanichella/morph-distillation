@@ -1,0 +1,11 @@
+Tokenizer,Vocab Size,Num Hidden Layers,Hidden Size,Hidden Act,Hidden Dropout Prob,Intermediate Size,Num Attention Heads,Attention Probs Dropout Prob,Max Sequence Length,Position Embedding Type,Learning Rate,Batch Size,Accuracy,Prediction Flips
+Unigram,15882,8,77,relu,0.5,490,7,0.5,457,relative_key,0.0001,16,0.842326928138984,60
+WordPiece,40096,4,165,gelu_new,0.5,163,3,0.5,284,relative_key,5e-05,8,0.8515704154002026,199
+Unigram,41654,8,212,gelu_new,0.4,2635,4,0.4,310,relative_key,0.0001,8,0.9107007336200356,159
+WordPiece,1148,3,147,silu,0.3,74,3,0.3,364,relative_key,0.001,16,0.88,96
+WordPiece,8808,9,39,relu,0.3,2660,3,0.3,324,relative_key,0.001,16,0.6666666666666666,0
+Unigram,4655,7,168,relu,0.5,32,6,0.5,389,relative_key_query,0.001,8,0.6666666666666666,4000
+Unigram,29126,8,242,silu,0.3,1684,11,0.3,420,relative_key,0.0001,8,0.958074919374845,54
+WordPiece,6106,10,84,silu,0.4,2171,4,0.4,266,relative_key,0.0001,8,0.9086903304773561,59
+Word,12248,5,135,relu,0.4,1922,5,0.4,394,absolute,0.0001,8,0.9280847842543528,102
+WordPiece,4663,9,180,silu,0.5,1582,1,0.5,314,relative_key,0.0001,16,0.8795024617776627,126
