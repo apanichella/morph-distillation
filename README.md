@@ -2,8 +2,8 @@
 
 MORPH is a tool for **many-objective search-based knowledge distillation** of large language models (LLMs). It optimizes key trade-offs between model size, efficiency (Gigafactory FLOPS), accuracy, and robustness (measured via metamorphic testing). This repository includes:
 
-	1.	**Source Code for MORPH**: The implementation of our many-objective optimization framework.
-	2.	**Source Code for AVATAR**: A modified version of the baseline approach for model distillation with added functionality to calculate model robustness by measuring prediction flips on metamorphic inputs. The original AVATAR source code can be found at: https://github.com/soarsmu/Avatar
+1. **Source Code for MORPH**: The implementation of our many-objective optimization framework.
+2. **Source Code for AVATAR**: A modified version of the baseline approach for model distillation with added functionality to calculate model robustness by measuring prediction flips on metamorphic inputs. The original AVATAR source code can be found at: https://github.com/soarsmu/Avatar
 
 ## Environment Setup
 
