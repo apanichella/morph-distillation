@@ -1,13 +1,13 @@
 #MORPH: Metamorphic-Based Many-Objective Distillation of LLMs for Code-related Tasks
 
-MORPH is a tool for **many-objective search-based knowledge distillation** of large language models (LLMs). It optimizes key trade-offs between model size, efficiency (response time), accuracy, and robustness (measured via metamorphic testing). This package includes:
+MORPH is a tool for **many-objective search-based knowledge distillation** of large language models (LLMs). It optimizes key trade-offs between model size, efficiency (Gigafactory FLOPS), accuracy, and robustness (measured via metamorphic testing). This repository includes:
 
 	1.	**Source Code for MORPH**: The implementation of our many-objective optimization framework.
-	2.	**Source Code for AVATAR**: A modified version of the baseline approach for model distillation with added functionality to calculate model robustness by measuring prediction flips on metamorphic inputs.
+	2.	**Source Code for AVATAR**: A modified version of the baseline approach for model distillation with added functionality to calculate model robustness by measuring prediction flips on metamorphic inputs. The original AVATAR source code can be found at: https://github.com/soarsmu/Avatar
 
 ## Environment Setup
 
-The artifact is designed to run in a Dockerized environment.
+The artifact is designed to run in a Dockerized environment (https://www.docker.com).
 To ensure reproducibility of experiments, we recommend using a machine equipped with GPUs and the NVIDIA CUDA toolkit. 
 However, the tool can also run on CPUs, automatically falling back when no GPU is detected. 
 If running on macOS (especially with Apple Silicon processors), check the compatibility of your Docker base image and dependencies.
@@ -33,8 +33,10 @@ We provide a `Dockerfile` to simplify the environment setup process. Use the fol
 
 If your machine does not have a GPU (i.e., no CUDA support), 
 you will need to use the CPU-compatible version of PyTorch instead. 
-In this case, replace the PyTorch version in the `Dockerfile` with `torch==1.10.0`. 
-Be sure to manually update the `Dockerfile` to reflect this change before building the image.
+The Dockerfile automatically detects whether your machine has a GPU with CUDA support. 
+If CUDA is available, it installs the GPU-compatible version of PyTorch. 
+Otherwise, it installs the CPU-only version. You do not need to manually 
+modify the Dockerfile to switch between GPU and CPU versions.
 
 2. **Run the Docker Container:**
 
