@@ -1,4 +1,4 @@
-#MORPH: Metamorphic-Based Many-Objective Distillation of LLMs for Code-related Tasks
+# MORPH: Metamorphic-Based Many-Objective Distillation of LLMs for Code-related Tasks
 
 MORPH is a tool for **many-objective search-based knowledge distillation** of large language models (LLMs). It optimizes key trade-offs between model size, efficiency (Gigafactory FLOPS), accuracy, and robustness (measured via metamorphic testing). This repository includes:
 
@@ -58,18 +58,30 @@ Replace `YOUR_LOCAL_PATH` with the directory where you have cloned this reposito
 
 ## Usage Instructions
 
-To train and evaluate a model distilled by MORPH, use the script `train_and_evaluate_morph.py`:
+To train and evaluate a model distilled by MORPH, follow these steps:
 
-```bash
-python3 train_and_evaluate_morph.py --task <task> --model <model>
-```
-Replace `<task>` with `clone-detection` for code clone detection or	`vulnerability-detection` for vulnerability detection.
-Replace `<model>` with `codebert` for CodeBERT or	`graphcodebert` for GraphCodeBERT.
+1. **Change to the Correct Directory**:
+   
+   After starting the Docker container, navigate to the /root/Morph directory where the repository is mounted:
 
-For example, if you want to distill CodeBERT on the `clone-detection` task, run the command:
-```bash
-python3 train_and_evaluate_morph.py --task clone-detection --model codebert
-```
+   ```bash
+   cd /root/Morph
+   ```
+
+2. **Run the Training and Evaluation Script**:
+   
+   Use the script train_and_evaluate_morph.py to train and evaluate the model:
+
+   ```bash
+   python3 train_and_evaluate_morph.py --task <task> --model <model>
+   ```
+   Replace `<task>` with `clone-detection` for code clone detection or	`vulnerability-detection` for vulnerability detection.
+   Replace `<model>` with `codebert` for CodeBERT or	`graphcodebert` for GraphCodeBERT.
+
+   For example, if you want to distill CodeBERT on the `clone-detection` task, run the command:
+   ```bash
+   python3 train_and_evaluate_morph.py --task clone-detection --model codebert
+   ```
 
 **Outputs** MORPH will generate two results files:
 
